@@ -8,7 +8,7 @@ public class ShopCompositRoot : MonoBehaviour
 
     private ShopController _shopController;
     private WalletModel _walletModel;
-    private decimal _startBalance = 10000; // [ ] Можно ли как-то вывести в инспекторе?
+    private float _startBalance = 10000; // [ ] Можно ли как-то вывести в инспекторе?
 
     private void Awake()
     {

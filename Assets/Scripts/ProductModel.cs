@@ -9,6 +9,6 @@ public class ProductModel : ScriptableObject
     [SerializeField] private Sprite productSprite; // [ ] Sprite это не Unity.UI?
 
     public string ProductName => productName;
-    public decimal ProductPrice => Convert.ToDecimal(productPrice); // [ ] Стоит ли так делать?
+    public float ProductPrice => productPrice; // [ ] Стоит ли испльзовать decemal в играх?
     public Sprite Sprite => productSprite;
 }

@@ -1,7 +1,7 @@
 using TMPro;
-using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class ShopWindowView : MonoBehaviour
 {
@@ -13,10 +13,12 @@ public class ShopWindowView : MonoBehaviour
     public ProductView ProductViewPrefab => productViewPrefab;
     public Transform ProductsParent => productsParent;
 
-    // private void Awake()
-    // {
-    //     buttonClose.onClick.AddListener(CloseWindow); // [ ] Стоит ли так писать?
-    // }
+    public event Action OnCloseClick;
+
+    private void Awake()
+    {
+        buttonClose.onClick.AddListener(OnButtonCloseClick); // [ ] Стоит ли так писать?
+    }
 
     // private void OnEnable() // [ ] Почему не всегда успевает срабатывать?
     // {
@@ -42,7 +44,7 @@ public class ShopWindowView : MonoBehaviour
     //     textBalance.text = _shopController.GetBalance().ToString();
     // }
 
-    public void SetBalance(decimal balance)
+    public void SetBalance(float balance)
     {
         textBalance.text = balance.ToString();
     }
@@ -61,4 +63,9 @@ public class ShopWindowView : MonoBehaviour
     // {
     //     _shopController.CloseWindow();
     // }
+
+    private void OnButtonCloseClick() // [ ] Стоит ли оставить так имя? И вообще стоит ли так издавать сигнал?   
+    {
+        OnCloseClick?.Invoke();
+    }
 }
