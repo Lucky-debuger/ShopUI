@@ -1,5 +1,0 @@
-C:/UnityProjects/ShopUI/.utmp/RelWithDebInfo/3g6t4b3r/arm64-v8a/CMakeFiles/edit_cache.dir
-C:/UnityProjects/ShopUI/.utmp/RelWithDebInfo/3g6t4b3r/arm64-v8a/CMakeFiles/rebuild_cache.dir
-C:/UnityProjects/ShopUI/.utmp/RelWithDebInfo/3g6t4b3r/arm64-v8a/GameActivity/CMakeFiles/game.dir
-C:/UnityProjects/ShopUI/.utmp/RelWithDebInfo/3g6t4b3r/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
-C:/UnityProjects/ShopUI/.utmp/RelWithDebInfo/3g6t4b3r/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir

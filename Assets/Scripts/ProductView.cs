@@ -1,6 +1,7 @@
 using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class ProductView : MonoBehaviour
 {
@@ -11,26 +12,28 @@ public class ProductView : MonoBehaviour
     [SerializeField] private TMP_Text productPrice;
     [SerializeField] private Button buyButton;
 
-    private ShopController _shopController;
+    // private ShopController _shopController; // [ ] Почему view не должен знать о controller?
     private ProductModel _productModel; // [ ] Стоит ли тут хранить?
+
+    public event Action<ProductModel> OnBuyClick;
 
     private void Awake()
     {
         buyButton.onClick.AddListener(BuyProduct);
     }
 
-    public void Construct(ShopController shopController, ProductModel productModel, Sprite icon, string title, string price) // [ ] price string или int?
+    public void Render(ProductModel productModel) // [ ] price string или int?
     {
-        _shopController = shopController;
         _productModel = productModel;
 
-        productIcon.sprite = icon; // [ ] Чем image отличается от spite? Как понять, что использовать?
-        productName.text = title;
-        productPrice.text = price;
+        productIcon.sprite = productModel.Sprite; // [ ] Чем image отличается от spite? Как понять, что использовать?
+        productName.text = productModel.ProductName;
+        productPrice.text = productModel.ProductPrice.ToString();
     }
 
     private void BuyProduct()
     {
-        _shopController.BuyProduct(_productModel);
+        // _shopController.BuyProduct(_productModel); // [ ] Почему нельзя вызывать напрямую?
+        OnBuyClick?.Invoke(_productModel);
     }
 }

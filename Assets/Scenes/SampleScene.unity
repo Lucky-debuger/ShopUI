@@ -234,7 +234,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -30.999939}
+  m_AnchoredPosition: {x: 0, y: -31}
   m_SizeDelta: {x: 1101.4773, y: -237.8828}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &160465059
@@ -1046,7 +1046,6 @@ MonoBehaviour:
   textBalance: {fileID: 787846074}
   productViewPrefab: {fileID: 4890081845275195267, guid: 4c34ee6ac540bca4c9ff091931ec4b68, type: 3}
   productsParent: {fileID: 1489246900}
-  productsList: {fileID: 11400000, guid: 96b7941f8947cbf46a3048e31d806c6c, type: 2}
 --- !u!114 &949852630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1060,7 +1059,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShopCompositRoot
   shopWindowView: {fileID: 949852629}
-  walletModel: {fileID: 11400000, guid: 4ae767194830ad149b69e1922b318986, type: 2}
+  productsListModel: {fileID: 11400000, guid: 96b7941f8947cbf46a3048e31d806c6c, type: 2}
 --- !u!1001 &984046900
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1589,7 +1588,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.00079345703}
+  m_AnchoredPosition: {x: 0, y: -0.0007324219}
   m_SizeDelta: {x: 0, y: 859.9759}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1489246901

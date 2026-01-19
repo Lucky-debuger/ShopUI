@@ -2,24 +2,37 @@ using System;
 using UnityEngine;
 public class ShopController
 {
-    private WalletModel _walletModel;
+    private readonly WalletModel _walletModel; // [ ] Зачем readonly?
+    private readonly ProductsListModel _productsListModel;
+    private readonly ShopWindowView _shopWindowView;
 
-    public event Action<float> OnBuyProduct;
-
-    public ShopController(WalletModel walletModel)
+    public ShopController(WalletModel walletModel, ProductsListModel productsListModel, ShopWindowView shopWindowView)
     {
         _walletModel = walletModel;
+        _productsListModel = productsListModel;
+        _shopWindowView = shopWindowView;
+
+        // Initialize(); // [ ] Тут или лучше в CompositionRoot? Да
     }
 
-    public void BuyProduct(ProductModel productModel)
+    public void Initialize()
     {
-        _walletModel.TryBuy(productModel.ProductPrice);
-        OnBuyProduct?.Invoke(_walletModel.Balance);
+        _shopWindowView.SetBalance(_walletModel.Balance);
+
+        foreach (ProductModel product in _productsListModel.ProductsList)
+        {
+            ProductView productModelInstance = GameObject.Instantiate(_shopWindowView.ProductViewPrefab, _shopWindowView.ProductsParent);
+            productModelInstance.Render(product);
+            productModelInstance.OnBuyClick += HandleByClick;
+        }
     }
 
-    public float GetBalance()
+    private void HandleByClick(ProductModel productModel)
     {
-        return _walletModel.Balance;
+        if (_walletModel.TrySpend(productModel.ProductPrice))
+        {
+            _shopWindowView.SetBalance(_walletModel.Balance);
+        }
     }
 
     public void CloseWindow()

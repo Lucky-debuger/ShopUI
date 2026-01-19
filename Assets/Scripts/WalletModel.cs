@@ -1,17 +1,26 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "WalletModel", menuName = "Scriptable Objects/WalletModel")]
-public class WalletModel : ScriptableObject
+public class WalletModel
 {
-    [SerializeField] private float balance; // [ ] Почему значение менятеся каждый раз при покупке?
+    private decimal _balance;
+    public decimal Balance => _balance;
 
-    public float Balance => balance;
+    // public void Initialize() // [ ] Так вообще можно делать у ScriptableObject? 
+    // {
+    //     _balance = decimal.TryParse(balance, out decimal result) ? result : 0m; // [ ] Стоит ли так делать, как я сделал?
+    // }
 
-    public void TryBuy(float price) // [ ] buy должна быть тут или в controller?
+    public WalletModel(decimal startBalance)
     {
-        if (balance < price) return;
+        _balance = startBalance;
+    }
 
-        balance -= price;
+    public bool TrySpend(decimal price)
+    {
+        if (price > _balance) return false;
+
+        _balance -= price;
+        return true;
     }
 
     // [ ] Еще предлагает сделать bool TrySpend(int amount) зачем?
