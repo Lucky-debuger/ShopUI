@@ -13,5 +13,9 @@ MonoBehaviour:
   m_Name: ProductsListModel
   m_EditorClassIdentifier: Assembly-CSharp::ProductsListModel
   productsList:
+  - {fileID: 11400000, guid: 00ff54963ae41aa4aa19a0400417a00a, type: 2}
+  - {fileID: 11400000, guid: 81cbd7f1fab7fb746b8e8fad1615f7c0, type: 2}
+  - {fileID: 11400000, guid: 69b74771a1673a948a7e1bd4361c8b7f, type: 2}
   - {fileID: 11400000, guid: 536c6a9ae1d56ed49961b72c3f7ccde1, type: 2}
+  - {fileID: 11400000, guid: eee1f860dac28b64c9cc18305de4bc2a, type: 2}
   - {fileID: 11400000, guid: 287f559b00cb8aa4492b7fea3f175e40, type: 2}
