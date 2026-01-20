@@ -1,9 +1,9 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
+
 public class ShopController
 {
-    private readonly WalletModel _walletModel; // [ ] Зачем readonly?
+    private readonly WalletModel _walletModel;
     private readonly ProductsListModel _productsListModel;
     private readonly ShopWindowView _shopWindowView;
     private readonly List<ProductView> _productViews = new List<ProductView>();
@@ -20,7 +20,7 @@ public class ShopController
         _shopWindowView.SetBalance(_walletModel.Balance);
         _shopWindowView.OnCloseClick += CloseWindow;
 
-        RenderProducts(); // [ ] Насколько я понял в моем случае вызываем в Initialize т.к. у меня всегда открыт
+        RenderProducts();
     }
 
     private void RenderProducts()
@@ -30,7 +30,7 @@ public class ShopController
             ProductView productModelInstance = GameObject.Instantiate(_shopWindowView.ProductViewPrefab, _shopWindowView.ProductsParent);
             productModelInstance.Render(product);
             productModelInstance.OnBuyClick += HandleBuyClick;
-            _productViews.Add(productModelInstance); // [ ] Почему выдает ошибку?
+            _productViews.Add(productModelInstance);
         }
     }
 
@@ -42,7 +42,7 @@ public class ShopController
         }
     }
 
-    private void ClearProducts() // [ ] Почему если не отпишусь, то будет утечка
+    private void ClearProducts()
     {
         foreach (ProductView product in _productViews)
         {

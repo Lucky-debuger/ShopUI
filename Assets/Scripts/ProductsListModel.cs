@@ -6,7 +6,5 @@ public class ProductsListModel : ScriptableObject
 {
     [SerializeField] private List<ProductModel> productsList;
 
-    public IReadOnlyList<ProductModel> ProductsList => productsList; // [ ] Стоит ли так делать?
-
-    // [ ] Почему тут именно IReadOnlyList, а не просто List?
+    public IReadOnlyList<ProductModel> ProductsList => productsList;
 }
