@@ -37,6 +37,7 @@ public class ProductView : MonoBehaviour
     private void BuyProduct()
     {
         PlayBuyButtonClickAnimation();
+        UIAudioManager.Instance.PlayBuy();
         OnBuyClick?.Invoke(_productModel);
     }
 

@@ -58,15 +58,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -1721873983, guid: 4cae6d6fcfe488542a185a85b92421c4, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 0.3
 --- !u!1 &1385722760893144023
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,10 +107,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 5286381719826245982}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.9833, y: 65.00924}
-  m_SizeDelta: {x: 340.6686, y: 316.6205}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.000015258789, y: 65.6}
+  m_SizeDelta: {x: -147.7863, y: -171.7777}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5542895971378369517
 CanvasRenderer:
@@ -140,9 +140,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -1876597861, guid: 4cae6d6fcfe488542a185a85b92421c4, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -218,16 +218,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 1056402821, guid: 4cae6d6fcfe488542a185a85b92421c4, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 0.4
 --- !u!114 &1159061859786235516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -362,8 +362,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -118.4, y: 0.0000014305}
-  m_SizeDelta: {x: 40, y: 40}
+  m_AnchoredPosition: {x: -149.2, y: 0.0000014305}
+  m_SizeDelta: {x: 65, y: 65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7099805352291018347
 CanvasRenderer:
@@ -393,7 +393,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 5109059aba73b1845a9dec22f4bfb603, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -441,11 +441,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5891997180467286591, guid: 98df406b4c18aac45b6f889f06c9a3cd, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 220.33
+      value: 290.096
       objectReference: {fileID: 0}
     - target: {fileID: 5891997180467286591, guid: 98df406b4c18aac45b6f889f06c9a3cd, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 30
+      value: 45.4985
       objectReference: {fileID: 0}
     - target: {fileID: 5891997180467286591, guid: 98df406b4c18aac45b6f889f06c9a3cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -477,11 +477,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5891997180467286591, guid: 98df406b4c18aac45b6f889f06c9a3cd, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 60.167
+      value: 25.287
       objectReference: {fileID: 0}
     - target: {fileID: 5891997180467286591, guid: 98df406b4c18aac45b6f889f06c9a3cd, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000005722
+      value: -0.0000019073
       objectReference: {fileID: 0}
     - target: {fileID: 5891997180467286591, guid: 98df406b4c18aac45b6f889f06c9a3cd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -501,7 +501,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6112503021737788243, guid: 98df406b4c18aac45b6f889f06c9a3cd, type: 3}
       propertyPath: m_fontSize
-      value: 26.85
+      value: 40.7
       objectReference: {fileID: 0}
     - target: {fileID: 6112503021737788243, guid: 98df406b4c18aac45b6f889f06c9a3cd, type: 3}
       propertyPath: m_margin.x
@@ -510,6 +510,18 @@ PrefabInstance:
     - target: {fileID: 6112503021737788243, guid: 98df406b4c18aac45b6f889f06c9a3cd, type: 3}
       propertyPath: m_margin.z
       value: 4.3835487
+      objectReference: {fileID: 0}
+    - target: {fileID: 6112503021737788243, guid: 98df406b4c18aac45b6f889f06c9a3cd, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 6112503021737788243, guid: 98df406b4c18aac45b6f889f06c9a3cd, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 6112503021737788243, guid: 98df406b4c18aac45b6f889f06c9a3cd, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -635,6 +647,14 @@ PrefabInstance:
     - target: {fileID: 6112503021737788243, guid: 98df406b4c18aac45b6f889f06c9a3cd, type: 3}
       propertyPath: m_margin.z
       value: 9.4125595
+      objectReference: {fileID: 0}
+    - target: {fileID: 6112503021737788243, guid: 98df406b4c18aac45b6f889f06c9a3cd, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 6112503021737788243, guid: 98df406b4c18aac45b6f889f06c9a3cd, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
