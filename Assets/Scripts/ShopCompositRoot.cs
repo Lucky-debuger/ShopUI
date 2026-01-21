@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class ShopCompositRoot : MonoBehaviour
 {
-    // [SerializeField] private ShopController shopController; // [ ] Почему его не видно в инспекторе?
     [SerializeField] private ShopWindowView shopWindowView;
     [SerializeField] private ProductsListModel productsListModel;
 
@@ -15,6 +14,5 @@ public class ShopCompositRoot : MonoBehaviour
         _walletModel = new WalletModel(_startBalance);
         _shopController = new ShopController(_walletModel, productsListModel, shopWindowView); // [ ] Я могу создать его только черзе new?
         _shopController.Initialize();
-        // shopWindowView.Initialize(_shopController);
     }
 }

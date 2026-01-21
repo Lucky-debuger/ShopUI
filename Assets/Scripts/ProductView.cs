@@ -2,6 +2,9 @@ using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
 using System;
+using System.Collections;
+using DG.Tweening;
+
 
 public class ProductView : MonoBehaviour
 {
@@ -27,10 +30,32 @@ public class ProductView : MonoBehaviour
         productIcon.sprite = productModel.Sprite;
         productName.text = productModel.ProductName;
         productPrice.text = productModel.ProductPrice.ToString();
+
+        PlayPopAnimation();
     }
 
     private void BuyProduct()
     {
+        PlayBuyButtonClickAnimation();
         OnBuyClick?.Invoke(_productModel);
+    }
+
+    private void PlayPopAnimation()
+    {
+        transform.localScale = Vector3.one * 0.5f;
+
+        transform.DOScale(1f, 0.5f).SetEase(Ease.OutBack);
+    }
+
+    private void PlayBuyButtonClickAnimation()
+    {
+        buyButton.transform.DOKill();
+        buyButton.transform.DOScale(0.9f, 0.07f)
+            .SetEase(Ease.OutQuad)
+            .OnComplete(() =>
+            {
+                buyButton.transform.DOScale(1f, 0.07f)
+                   .SetEase(Ease.InQuad);
+            });
     }
 }
